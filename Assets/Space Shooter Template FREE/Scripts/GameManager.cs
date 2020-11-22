@@ -9,6 +9,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	public PlayerProfile player1, player2;
+	public int index=1;
 
     public static GameManager Instance { get; private set; }
 

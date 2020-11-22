@@ -17,6 +17,7 @@ TagManager:
   - Player1
   - Player2
   - Module slot
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8357946e2c9c4e04eb269d96b05f348b, type: 3}
   m_Name: Defense C
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  Weapon: {fileID: 0}
   ModuleName: 
   type: 1
   healthModValue: 0
@@ -28,5 +26,5 @@ MonoBehaviour:
   ShieldRecoveryMod: 0
   healthPercentMod: 0
   shieldPercentMod: 0
-  fireRatePercentMod: 0
+  fireRatePercentMod: -20
   ShieldRecoveryPercentMod: 0

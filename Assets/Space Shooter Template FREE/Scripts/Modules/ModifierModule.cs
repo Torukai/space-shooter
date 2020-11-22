@@ -16,7 +16,7 @@ public class ModifierModule : Module
 	public float fireRatePercentMod;
 	public float ShieldRecoveryPercentMod;
 	
-	public void Equip(PlayerProfile player)
+	public override void Equip(PlayerProfile player)
 	{
 		if (healthMod != 0)
 			player.Health.AddModifier(new StatModifier(healthMod, StatModType.Flat, this));
@@ -32,9 +32,9 @@ public class ModifierModule : Module
 		if (shieldPercentMod != 0)
 			player.Shield.AddModifier(new StatModifier(shieldPercentMod, StatModType.PercentMult, this));
 		if (fireRatePercentMod != 0)
-			player.FireRate.AddModifier(new StatModifier(fireRatePercentMod, StatModType.PercentMult, this));
+			player.FireRate.AddModifier(new StatModifier(fireRatePercentMod, StatModType.PercentAdd, this));
 		if (ShieldRecoveryPercentMod != 0)
-			player.ShieldRecovery.AddModifier(new StatModifier(ShieldRecoveryPercentMod, StatModType.PercentMult, this));
+			player.ShieldRecovery.AddModifier(new StatModifier(ShieldRecoveryPercentMod, StatModType.PercentAdd, this));
 	}
 
 	public void Unequip(PlayerProfile player)

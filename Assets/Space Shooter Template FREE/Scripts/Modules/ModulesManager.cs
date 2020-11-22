@@ -56,10 +56,12 @@ public class ModulesManager : MonoBehaviour
         foreach (var m in modules1)
         {
             var module = m.Module as WeaponModule;
-            module.AddWeapon(GameManager.Instance.player1);
-            GameManager.Instance.player1.AddWeapon(module.damage, module.fireRate);
+            //module.AddWeapon(GameManager.Instance.player1);
+            // GameManager.Instance.player1.AddWeapon(module.damage, module.fireRate);
             //(WeaponModule)module.Weapon;
             GameManager.Instance.player1.modules.AddModule(m.Module);
+            //GameManager.Instance.player1.weapon1 = module.weapon;
+            module.AddWeapon(GameManager.Instance.player1);
         }
 
         modules1 = GameObject.Find("Canvas/Player mods 1/Body/DefenseModules").GetComponentsInChildren<ModuleSlot>();
@@ -68,10 +70,13 @@ public class ModulesManager : MonoBehaviour
 
         foreach (var m in modules1)
 		{
-            
-            GameManager.Instance.player1.modules.AddModule(m.Module);
-            m.Module.Equip(GameManager.Instance.player1);
-
+            //as ModifierModule;
+            if (m.Module is ModifierModule)
+			{
+                var module = (ModifierModule)m.Module;
+                GameManager.Instance.player1.modules.AddModule(module);
+                module.Equip(GameManager.Instance.player1);
+            }
         }
 
        
@@ -91,14 +96,31 @@ public class ModulesManager : MonoBehaviour
     }
     public void Equip2()
     {
-        //for (int i = 0; i < SecondPlayerModules.moduleSlots.Length; i++)
-        //{
-        //    SecondPlayerModules.moduleList.Add(SecondPlayerModules.moduleSlots[i].Module);
-        //}
-    }
+        GameManager.Instance.player2.RemoveAllModules();
 
-	private void OnDestroy()
-	{
-        //Debug.Log("I AM DESTROIED");
-	}
+        //var properties = GameObject.Find("PlayerProperties").GetComponentsInChildren<PlayerProperties>();
+        var modules1 = GameObject.Find("Canvas/Player mods 2/Body/WeaponModules").GetComponentsInChildren<ModuleSlot>();
+        foreach (var m in modules1)
+        {
+            var module = m.Module as WeaponModule;
+            //module.AddWeapon(GameManager.Instance.player1);
+            // GameManager.Instance.player1.AddWeapon(module.damage, module.fireRate);
+            //(WeaponModule)module.Weapon;
+            GameManager.Instance.player2.modules.AddModule(m.Module);
+            //GameManager.Instance.player1.weapon1 = module.weapon;
+            module.AddWeapon(GameManager.Instance.player2);
+        }
+
+        modules1 = GameObject.Find("Canvas/Player mods 2/Body/DefenseModules").GetComponentsInChildren<ModuleSlot>();
+
+        //var test = GameManager.Instance.player1.modules;
+
+        foreach (var m in modules1)
+        {
+            var module = m.Module as ModifierModule;
+            GameManager.Instance.player2.modules.AddModule(module);
+            module.Equip(GameManager.Instance.player2);
+
+        }
+    }
 }

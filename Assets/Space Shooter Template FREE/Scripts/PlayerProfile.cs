@@ -19,6 +19,7 @@ public class PlayerProfile : ScriptableObject
 	public PlayerModules modules;
 	public List<Weapon> weapons;
 	public List<Module> myModules;
+	public Weapon weapon1;
 
 	public void Init()
 	{
@@ -28,6 +29,7 @@ public class PlayerProfile : ScriptableObject
 		FireRate = new PlayerStat(BaseFireRate);
 		ShieldRecovery = new PlayerStat(BaseShieldRecovery);
 		modules = new PlayerModules();
+		weapons = new List<Weapon>();
 		myModules = modules.moduleList;
 	}
 	public PlayerStat[] GetStats()
@@ -36,15 +38,17 @@ public class PlayerProfile : ScriptableObject
 		return stats;
 	}
 
-	public void AddModule(Module module)
+	public void AddModule(ModifierModule module)
 	{
+		//var temp = (ModifierModule)module;
 		module.Equip(this);
 		//statPanel.UpdateStatValues();
 	}
 
 	public void AddWeapon(float damage, float firerate)
 	{
-		weapons.Add(new Weapon(damage, firerate));
+		//weapons.Add(new Weapon(damage, firerate));
+		//weapon1 = new Weapon(damage, firerate);
 	}
 
 	public void RemoveModule(ModifierModule module)
@@ -63,5 +67,7 @@ public class PlayerProfile : ScriptableObject
 		removed= ShieldRecovery.RemoveAllModifiersFromSource(this);
 		//module.Unequip(this);
 		///statPanel.UpdateStatValues();
+		///
+		Init();
 	}
 }

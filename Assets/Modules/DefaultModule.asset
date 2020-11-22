@@ -9,22 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8357946e2c9c4e04eb269d96b05f348b, type: 3}
-  m_Name: Defense D
+  m_Script: {fileID: 11500000, guid: dd6ef9ca0ff491e41bacc6f992731d2e, type: 3}
+  m_Name: DefaultModule
   m_EditorClassIdentifier: 
   ModuleName: 
-  type: 1
+  type: 0
   healthModValue: 0
   shieldModValue: 0
   fireRateModValue: 0
   shieldRecoveryModValue: 0
   weaponDamage: 0
-  icon: {fileID: 21300000, guid: 2409e282002a8ca4d919212e9569a286, type: 3}
-  healthMod: 0
-  shieldMod: 0
-  fireRateMod: 0
-  ShieldRecoveryMod: 0
-  healthPercentMod: 0
-  shieldPercentMod: 0
-  fireRatePercentMod: 0
-  ShieldRecoveryPercentMod: 20
+  icon: {fileID: 0}

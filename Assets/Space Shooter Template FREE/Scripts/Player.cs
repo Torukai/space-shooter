@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         //propertiesParent = GameObject.Find("PlayerProperties");
-
+        
         //properties = propertiesParent.GetComponentInChildren<PlayerProperties>();
         //if (instance == null)
         //	instance = this;
@@ -61,7 +61,10 @@ public class Player : MonoBehaviour
 		{
 			//modules = ModulesManager.instance.Player2();
 			GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("RedSpaceship");
-		}
+            health = GameManager.Instance.player2.Health.Value;
+            shield = GameManager.Instance.player2.Shield.Value;
+            shieldRecoverySpeed = GameManager.Instance.player2.ShieldRecovery.Value;
+        }
 
         //DontDestroyOnLoad(this);
 		//playerModules = new Modules();
@@ -69,7 +72,7 @@ public class Player : MonoBehaviour
     }
 
     //method for damage proceccing by 'Player'
-    public void GetDamage(int damage)   
+    public void GetDamage(float damage)   
     {
         if (shield > 0)
 		{
@@ -83,6 +86,11 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    public void setShield(float shieldAmount)
+	{
+        shield = shieldAmount;
+	}
 
     public bool IsAlive()
 	{

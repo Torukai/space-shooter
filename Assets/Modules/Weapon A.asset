@@ -21,5 +21,7 @@ MonoBehaviour:
   shieldRecoveryModValue: 0
   weaponDamage: 0
   icon: {fileID: 21300000, guid: df7803f9a099f934ebbc19f378fc878e, type: 3}
-  damage: 20
-  fireRate: 0
+  damage: 5
+  fireRate: 3
+  weapon: {fileID: 0}
+  projectile: {fileID: 1413877261856170, guid: 7120694aa5e8a9d4a88b1e61228dabb0, type: 3}

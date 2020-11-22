@@ -14,18 +14,24 @@ public class Setting : MonoBehaviour
 	{
 		if (level == 0)
 		{
-			SetBlueSpaceship();
+			if (GameManager.Instance.index == 1)
+				SetBlueSpaceship();
+
+			if (GameManager.Instance.index == 2)
+				SetRedSpaceship();
 		}
 	}
 
 	public void SetRedSpaceship()
 	{
+		GameManager.Instance.index = 2;
 		statPanel.SetStats(GameManager.Instance.player2.GetStats());
 		statPanel.UpdateStatValues();
 	}
 
 	public void SetBlueSpaceship()
 	{
+		GameManager.Instance.index = 1;
 		statPanel.SetStats(GameManager.Instance.player1.GetStats());
 		statPanel.UpdateStatValues();
 	}

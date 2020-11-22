@@ -10,6 +10,7 @@ public class HealthBarUI : MonoBehaviour
     public Gradient gradient;
     public Image fill;
     public BarType type;
+    public Text text;
 
     public enum BarType
 	{
@@ -22,14 +23,14 @@ public class HealthBarUI : MonoBehaviour
 	{
         slider.maxValue = health;
         slider.value = health;
-
+        
         fill.color = gradient.Evaluate(1f);
 	}
 
     public void SetHealth(float health)
 	{
         slider.value = health;
-
+        text.text = health.ToString();
         fill.color = gradient.Evaluate(slider.normalizedValue);
 	}
 
@@ -60,5 +61,7 @@ public class HealthBarUI : MonoBehaviour
         {
             SetHealth(player.shield);
         }
+
+        text.text = slider.value.ToString();
     }
 }

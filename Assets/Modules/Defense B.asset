@@ -12,16 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8357946e2c9c4e04eb269d96b05f348b, type: 3}
   m_Name: Defense B
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 0}
   ModuleName: 
   type: 1
-  healthModValue: 0
-  shieldModValue: 50
-  fireRateModValue: 0
-  shieldRecoveryModValue: 0
-  weaponDamage: 0
   icon: {fileID: 21300000, guid: 92f32d872231db54eb5e5cdc8764dc49, type: 3}
-  healthMod: 0
+  healthMod: 50
   shieldMod: 0
   fireRateMod: 0
   ShieldRecoveryMod: 0
