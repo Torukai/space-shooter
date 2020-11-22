@@ -107,7 +107,7 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 		//if (originalObj == null)
 		//	return null;
 
-		var module = originalObj.GetComponent<ModuleUI>();
+		var module = originalObj.GetComponent<BaseSlot>().Module;
 		if (module == null)
 		{
 

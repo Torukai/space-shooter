@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModuleName: 
   type: 0
-  healthModValue: 0
-  shieldModValue: 0
-  fireRateModValue: 0
-  shieldRecoveryModValue: 0
-  weaponDamage: 0
-  icon: {fileID: 21300000, guid: 972fb9e7b0a80ce47bc9fb6e0f20df72, type: 3}
+  icon: {fileID: 21300000, guid: bc9b1895669ee794c9efb136cd8ce9ac, type: 3}
   damage: 4
   fireRate: 2
   projectile: {fileID: 1728936453619090, guid: 9610b32634c0355409b4b5991571a66b, type: 3}

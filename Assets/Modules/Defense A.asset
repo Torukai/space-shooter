@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModuleName: 
   type: 1
-  icon: {fileID: 21300000, guid: fb68afadc1d00924892ab17a3ff1ae68, type: 3}
+  icon: {fileID: 21300000, guid: 352acbafbc838554485291bcbb016104, type: 3}
   healthMod: 0
   shieldMod: 50
   fireRateMod: 0

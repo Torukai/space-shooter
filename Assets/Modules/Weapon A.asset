@@ -12,16 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33946393509cc004eae319d77c9343c7, type: 3}
   m_Name: Weapon A
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 0}
   ModuleName: 
   type: 0
-  healthModValue: 0
-  shieldModValue: 0
-  fireRateModValue: 0
-  shieldRecoveryModValue: 0
-  weaponDamage: 0
-  icon: {fileID: 21300000, guid: df7803f9a099f934ebbc19f378fc878e, type: 3}
+  icon: {fileID: 21300000, guid: b314ba8bb94ff24408ff2597ada11576, type: 3}
   damage: 5
   fireRate: 3
-  weapon: {fileID: 0}
   projectile: {fileID: 1413877261856170, guid: 7120694aa5e8a9d4a88b1e61228dabb0, type: 3}

@@ -19,20 +19,16 @@ MonoBehaviour:
   BaseShieldRecovery: 1
   Health:
     BaseValue: 60
-    _value: 210
+    _value: 0
   Shield:
     BaseValue: 120
-    _value: 120
+    _value: 0
   FireRate:
     BaseValue: 1
-    _value: 1
+    _value: 0
   ShieldRecovery:
     BaseValue: 1
-    _value: 1
+    _value: 0
+  spaceship: {fileID: 21300000, guid: 6d33713bf06cde946b39a56d10005de4, type: 3}
   modules: {fileID: 0}
-  myModules:
-  - {fileID: 11400000, guid: 3852c32ddf56de94b8e2672cc59d5588, type: 2}
-  - {fileID: 11400000, guid: 6e90bc5196a2c7c41b9628fcceac3c52, type: 2}
-  - {fileID: 11400000, guid: 30575f28027bd244494b3e06ea95eeb4, type: 2}
-  - {fileID: 11400000, guid: 30575f28027bd244494b3e06ea95eeb4, type: 2}
-  - {fileID: 11400000, guid: 30575f28027bd244494b3e06ea95eeb4, type: 2}
+  myModules: []

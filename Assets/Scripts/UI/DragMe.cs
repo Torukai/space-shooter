@@ -31,7 +31,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		group.blocksRaycasts = false;
 
 		image.sprite = GetComponent<Image>().sprite;
-		image.SetNativeSize();
+		//image.SetNativeSize();
 		
 		if (dragOnSurfaces)
 			m_DraggingPlanes[eventData.pointerId] = transform as RectTransform;

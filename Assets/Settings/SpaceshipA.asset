@@ -22,16 +22,17 @@ MonoBehaviour:
     _value: 100
   Shield:
     BaseValue: 80
-    _value: 80
+    _value: 180
   FireRate:
     BaseValue: 1
-    _value: 1
+    _value: 0
   ShieldRecovery:
     BaseValue: 1
     _value: 1
+  spaceship: {fileID: 21300000, guid: 04978f66fb92642428f4057d5512832c, type: 3}
   modules: {fileID: 0}
   myModules:
-  - {fileID: 11400000, guid: e1b94c3ef61a74d4280ba478acd7a451, type: 2}
+  - {fileID: 11400000, guid: 6e90bc5196a2c7c41b9628fcceac3c52, type: 2}
   - {fileID: 11400000, guid: 6e90bc5196a2c7c41b9628fcceac3c52, type: 2}
   - {fileID: 11400000, guid: 30575f28027bd244494b3e06ea95eeb4, type: 2}
-  - {fileID: 11400000, guid: 383ac7a865120d748b31227d5cbf2b01, type: 2}
+  - {fileID: 11400000, guid: 30575f28027bd244494b3e06ea95eeb4, type: 2}
